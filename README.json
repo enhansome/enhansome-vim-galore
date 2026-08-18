@@ -383,7 +383,7 @@
             "last_commit": "2026-06-12T05:24:58Z",
             "owner": "spf13",
             "repo": "spf13-vim",
-            "stars": 15481
+            "stars": 15482
           }
         },
         {
@@ -450,7 +450,7 @@
     }
   ],
   "metadata": {
-    "last_updated": "2026-08-17T19:41:27.434Z",
+    "last_updated": "2026-08-18T19:39:51.189Z",
     "original_repository": "mhinz/vim-galore",
     "original_repository_sha": "604f1a6f39705a83c02dd94b7ff2db1d3ff136f7",
     "enhanced_repository": "enhansome/enhansome-vim-galore",
