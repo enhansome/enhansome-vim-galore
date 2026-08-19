@@ -1,457 +1,68 @@
 {
   "items": [
     {
-      "description": "",
-      "items": [],
-      "title": "List of colorschemes"
-    },
-    {
-      "description": "",
-      "items": [],
-      "title": "List of plugins"
-    },
-    {
-      "description": "Vim is a text editor with a long line of ancestors that goes back to qed. Bram Moolenaar released it in 1991.\nThe project is hosted online at vim.org.\nGetting Vim: Use your favourite package manager or visit the download page from vim.org.\nDiscussions and user questions are best done on the vim_use mailing list or using IRC (Freenode) in the channel.\nDevelopment happens on GitHub, discussions on the vim_dev mailing list.\nRead Why, oh WHY, do those #?@! nutheads use vi? to see common misconceptions about Vim explained.",
-      "items": [],
-      "title": "What is Vim?"
-    },
-    {
-      "description": "Vim adheres to the modal editing philosophy. This means that it provides multiple modes and the meaning of keys changes according to the mode. You navigate files in normal mode, you insert text in insert mode, you select lines in visual mode, you access commands in command-line mode and so on. This might sound complicated at first, but has a huge advantage: you don't have to break your fingers by holding several keys at once, most of the time you simply press them one after the other. The more common the task, the fewer keys are needed.\nA related concept that works well with modal editing are operators and motions. Operators start a certain action, e.g. changing, removing, or selecting text. Afterwards you specify the region of text you want to act on using a motion. To change everything between parentheses, use (read change inner parentheses). To remove an entire paragraph of text, use (read delete around paragraph).\nIf you see advanced Vim users working, you'll notice that they speak the language of Vim as well as pianists handle their instruments. Complex operations are done using only a few key presses. They don't even think about it anymore as muscle memory took over already. This reduces cognitive load and helps to focus on the actual task.",
-      "items": [],
-      "title": "The Vim Philosophy"
-    },
-    {
-      "description": "The user vimrc can be put into or for the sake of better separation into . The latter makes it easy to put the entire configuration under version control and upload it to, let's say GitHub.\nYou find many \"minimal vimrcs\" all over the net, and maybe my version isn't as minimal as it should be, but it provides a good set of sane settings that I deem to be useful for starting out.\nEventually you have to read up on all the mentioned settings anyway and decide for yourself. :-)\nSo here it is: minimal-vimrc\nIn case you're interested, here's my vimrc.\nTIP: Most plugin authors maintain several plugins and also publish their vimrc on GitHub (often in a repository called \"vim-config\" or \"dotfiles\"), so whenever you find a plugin you like, look up its maintainer's GitHub page and look through the repositories.",
-      "items": [],
-      "title": "Minimal vimrc"
-    },
-    {
-      "description": "Looking at will give you all the information you need to know about how the currently running Vim binary was compiled.\nThe first line tells you when the binary was compiled and the version, e.g. 7.4. One of the next lines states , which is the patch level. Thus, your exact Vim version is 7.4.1051.\nAnother line states something like or . The obvious information from that is whether your Vim includes GUI support, e.g. for starting from the shell or running from Vim within a terminal emulator. The other important information is the and . Vim distinguishes between feature sets called , , , , and , all enabling different subsets of features.\nThe majority of output is consumed by the feature list itself. means the clipboard feature was compiled in, means it wasn't compiled in.\nA few Vim features need to be compiled in for them to work. E.g. for to work, you need a Vim with a huge feature set, because that set enables the feature.\nIf that's not the case and you installed Vim from a package manager, make sure to install a package called , , , or similar, since these packages usually come with the huge feature set.\nYou can also test for the version or features programmatically:\nHelp:",
-      "items": [],
-      "title": "What kind of Vim am I running?"
-    },
-    {
-      "description": "Vim is a text editor. Every time text is shown, the text is part of a buffer. Each file will be opened in its own buffer. Plugins show stuff in their own buffers etc.\nBuffers have many attributes, e.g. whether the text it contains is modifiable, or whether it is associated with a file and thus needs to be synchronized to disk on saving.\nWindows are viewports onto buffers. If you want to view several files at the same time or even different locations of the same file, you use windows.\nAnd please, please don't call them splits. You can split a window in two, but that doesn't make them splits.\nWindows can be split vertically or horizontally and the heights and widths of existing windows can be altered, too. Therefore, you can use whatever window layout you prefer.\nA tab page (or just tab) is a collection of windows. Thus, if you want to use multiple window layouts, use tabs.\nPutting it in a nutshell, if you start Vim without arguments, you'll have one tab page that holds one window that shows one buffer.\nBy the way, the buffer list is global and you can access any buffer from any tab.",
-      "items": [],
-      "title": "Buffers, windows, tabs"
-    },
-    {
-      "description": "Run Vim like this . The file's content will be loaded into a buffer. You have a loaded buffer now. The content of the buffer is only synchronized to disk (written back to the file) if you save it within Vim.\nSince the buffer is also shown in a window, it's also an active buffer. Now if you load another file via , will become a hidden buffer and the active one.\nBoth buffers are also listed, thus they will get listed in the output of . Plugin buffers or help buffers are often marked as unlisted, since they're not regular files you usually edit with a text editor. Listed and unlisted buffers can be shown via .\nUnnamed buffers, also often used by plugins, are buffers that don't have an associated filename. E.g. will create an unnamed scratch buffer. Add some text and write it to disk via , and it will become a named buffer.",
-      "items": [],
-      "title": "Active, loaded, listed, named buffers"
-    },
-    {
-      "description": "The global buffer list is a Vim thing. Before that, in vi, there only used to be the argument list, which is also available in Vim.\nEvery filename given to Vim on the shell command-line, is remembered in the argument list. There can be multiple argument lists: by default all arguments are put into the global argument list, but you can use to create a new argument list that is local to the window.\nList the current arguments with . Switch between files from the argument list with , , , and friends. Alter it with , or with a list of files.\nIf you should prefer using the buffer or argument list for working with files is a matter of taste. My impression is that most people use the buffer list exclusively.\nNevertheless, there is one huge use case for the argument list: batch processing via ! A simple refactoring example:\nThis replaces all occurrences of \"foo\" by \"bar\" in all C source and header files from the current directory and below.\nHelp:",
-      "items": [],
-      "title": "Argument list"
-    },
-    {
-      "description": "You can define your own mappings with the family of commands. Each command of that family defines a mapping for a certain set of modes. Technically Vim comes with a whopping 12 modes, 6 of them can be mapped. Additionally, some commands act on multiple modes at once.\nE.g. this defines the mapping for normal mode only:\nUnmap it again by using .\nFor a few more but rather uncommon modes (or combinations of them), see .\nSo far, so good. There's only one problem that can be pretty confusing to beginners: is recursive! That is, the right-hand side takes other mappings into account.\nSo you defined a mapping that simply echoes \"Foo\":\nBut what if you want to map the default behavior of (going one word back) to another key?\nIf you hit a, we expect the cursor to go back a word, but instead \"Foo\" is printed in the command-line! Because the right-hand side, , was mapped to another action already, namely .\nThe proper way to resolve this problem is to use a non-recursive mapping instead:\nRule of thumb: Always use non-recursive mappings unless recursing is actually desired.\nLook up your mappings by not giving a right-hand side. E.g. shows all normal mappings and shows all normal mappings that start with the mapleader.\nIf you want to disable a standard mapping, map them to the special character, e.g. .\nHelp:",
-      "items": [],
-      "title": "Mappings"
-    },
-    {
-      "description": "The mapleader is simply a placeholder than can be used with custom mappings and is set to by default.\nThis mapping is triggered by . If you want to use instead:\nMoreover, there is that is the local counterpart to and is supposed to be used for mappings that are local to the buffer, eg. filetype-specific plugins. It also defaults to .\nNote: Set the mapleaders before mappings! All leader mappings that are in effect already, won't change just because the mapleader was changed. will show all normal mode leader mappings with the mapleader resolved already, so use it to double-check your mappings.\nSee and for more.",
-      "items": [],
-      "title": "Mapleader"
-    },
-    {
-      "description": "Registers are slots that save text. Copying text into a register is called yanking and extracting text from a register is called pasting.\nVim provides the following registers:\nEach register that is not readonly can be set by the user:\nAfterwards n would jump to the next occurrence of \"register\".\nThere are numerous exceptions when registers get implicitly filled, so be sure to read .\nYank with and paste with /, but mind that Vim distinguishes between characterwise and linewise visual selections. See .\nExample: linewise\n(or just ) yanks the current line, move the cursor somewhere else, use to paste below the current line for pasting above it.\nExample: charwise\nYank the first word with , move somewhere else, paste after the cursor on the current line with and before the cursor with .\nExample: explicit naming of register\nyanks the current line into register . Move to another line. appends the current line to register .\nI suggest playing around with all these registers a bit and constantly checking , so you can see what's actually happening.\nFun fact: In Emacs \"yanking\" stands for pasting (or reinserting previously killed text) not copying.",
-      "items": [],
-      "title": "Registers"
-    },
-    {
-      "description": "You use marks to remember a position, that is line number and column, in a file.\nPut / or / in front of a mark to form a motion.\nUse to remember the current position with mark \"m\". Move around the file and then jump back via (first non-blank) or (exact column). Lowercase marks will be remembered after exiting Vim, if you tell your viminfo file to do so, see .\nUse to remember the current position with file mark \"M\". Switch to another buffer and switch back via or .\nOther motions include:\nMarks can also be used in a range. You probably saw this before and wondered what it means: Select some text in visual mode and do , the command-line will be prepended with , which means the following command would get a range that denotes the visual selection.\nUse to list all marks. Read everything in .",
-      "items": [],
-      "title": "Marks"
-    },
-    {
-      "description": "Vim provides many kinds of insert mode completions. If there are multiple matches, a popup menu will let you navigate to the match of your choice.\nTypical kinds of completion are tags, functions from imported modules or libraries, file names, dictionary or simply words from the current buffer.\nVim provides a mapping for each kind of completion and they all start with (remember to use them in insert mode):\nPeople might be confused about the difference between user defined completion and omni completion, but technically they do the same thing. They take a function that inspects the current position and return a list of suggestions. User defined completion is defined by the user for their own personal purposes. (Surprise!) It could be anything. Omni completion is meant for filetype-specific purposes, like completing struct members or class methods, and is often set by filetype plugins.\nVim also allows for completing multiple kinds at once by setting the option. By default that option includes quite a lot, so be sure to trim it to your taste. You can trigger this completion by using either (next) and (previous), which also happen to be the keys used for choosing entries in the popup menu. See and for more on this.\nBe sure to check out for configuring the behaviour of the popup menu. The default is quite sane, but I prefer adding \"noselect\" as well.\nHelp:",
-      "items": [],
-      "title": "Completion"
-    },
-    {
-      "description": "Motions move the cursor. You all know ///. Or and . Even is a motion. They also take a count. jumps to the second last occurrence of \"the\".\nSee and everything below for all available motions.\nOperators act on a region of text, e.g. , , , to name just a few. They get used in two contexts, either in normal or visual mode. In normal mode, operators come first followed by a motion, e.g. . In visual mode, operators simply act on the selection, e.g. .\nLike motions, operators take a count, e.g. makes the rest of the current word and the next one uppercase. Since motions and operators take counts, works just as well and executes twice.\nSee for all available operators. Use to make act as an operator.\nText objects act on the surrounding area, opposed to motions that act into one direction. Actually they work on objects, e.g. a whole word, a whole sentence, everything between parentheses, and so on.\nText objects can't be used to move the cursor in normal mode, because even the most-skilled cursors can't jump into two directions at the same time. It works in visual mode though, because then one side of the object is already selected and the cursor simply jumps to the other side.\nText objects start with either (think inner) or (think around) followed by a character denoting the object. With it only acts on the object itself, with on the object plus trailing whitespace. E.g. deletes the current word and changes everything between parentheses.\nText objects take a count. Imagine and the cursor on or between the most inner parentheses, then will remove the 2 inner pairs of parentheses and everything in between.\nSee for all available text objects.",
-      "items": [],
-      "title": "Motions, operators, text objects"
-    },
-    {
-      "description": "You can trigger an action after many events in Vim, such as a buffer being saved or Vim having started up, by so-called autocmds.\nVim relies extensively on autocmds. Don't believe me? Check , but don't let the output overwhelm you. These are all the autocmds that are in effect right now!\nSee for a quick overview of all available events and for more details.\nA typical example would be filetype-specific settings:\nBut how does a buffer even know that it contains Ruby code? Because another autocmd detected it as that and set the filetype accordingly which again triggered the event.\nOne of the first things everyone adds to their vimrc is . This simply means that is read at startup which sets autocmds for almost all filetypes under the sun.\nIf you're brave enough, have a look at it: . Search for \"Ruby\" and you'll find that Vim simply uses the file extension to detect Ruby files:\nNOTE: Autocmds of the same event are executed in the order they were created. shows them in the correct order.\nThe and events in this case are hardcoded in the C sources of Vim and get emitted every time you open a file via and similar commands. Afterwards all the hundreds of filetypes from are tested for.\nPutting it in a nutshell, Vim makes heavy use of events and autocmds but also exposes a clean interface to hook into that event-driven system for customization.\nHelp:",
-      "items": [],
-      "title": "Autocmds"
-    },
-    {
-      "description": "The positions of the last 100 changes are kept in the changelist. Several small changes on the same line will be merged together, but the position will be that of the last change nevertheless (in case you added something in the middle of the line).\nEvery time you jump, the position before the jump is remembered in the jumplist. A jumplist has up to 100 entries. Each window has its own jumplist. When you split a window, the jumplist is copied.\nA jump is one of the following commands: , , , , , , , , , , , , , , , , , , and commands that start editing a new file.\nWhen you list all entries, a marker will be used to show the current position. Usually that will be below position 1, the latest position.\nIf you want both lists to persist after restarting Vim, you need to use the viminfo file and .\nNOTE: The position before the latest jump is also kept as a mark and can be jumped to via or .\nHelp:",
-      "items": [],
-      "title": "Changelist, jumplist"
-    },
-    {
-      "description": "The latest changes to the text state are remembered. You can use undo to revert changes and redo to reapply previously reverted changes.\nThe important bit to understand it that the data structure holding recent changes is not a queue but a tree! Your changes are nodes in the tree and each (but the top node) has a parent node. Each node keeps information about the changed text and time. A branch is a series of nodes that starts from any node and goes up to the top node. New branches get created when you undo a change and then insert something else.\nNow you have 3 lines and the undo tree looks like this:\nThe undo tree has 4 changes. The numbers represent the time the nodes were created.\nNow there are two ways to traverse this tree, let's call them branch-wise and time-wise.\nUndo () and redo () work branch-wise. They go up and down the current branch. will revert the text state to the one of node \"bar\". Another will revert the text state even further, to the one of node \"foo\". Now goes back to the state of node \"bar\" and another to the state of node \"quux\". (There's no way to reach node \"baz\" using branch-wise commands anymore.)\nOpposed to this, and work time-wise. Thus, won't revert to the state of node \"bar\", like does, but to the chronologically previous state, node \"baz\". Another would revert the state to the one of node \"bar\" and so on. Thus, and simply go back and forth in time, respectively.\nThe undo tree is kept in memory and will be lost when Vim quits. See Undo files for how to enable persistent undo.\nIf you're confused by the undo tree, undotree does a great job at visualizing it.\nHelp:",
-      "items": [],
-      "title": "Undo tree"
-    },
-    {
-      "description": "Every text (or source code) has a certain structure. If you have a structure, it means you have regions of logically separated text. Folding allows to \"fold\" such a region into a single line and displaying a short description. There are many commands that act on these regions called folds. Folds can be nested.\nVim distinguishes between several types of fold methods:\nNOTE: Folding can be computationally intensive! If you experience any performance drawbacks (small delays when typing), have a look at FastFold, which prevents Vim from updating folds when it's not needed.\nHelp:",
-      "items": [],
-      "title": "Folding"
-    },
-    {
-      "description": "If you save a view (), the current state of the window (and options and mappings) gets saved for later use ().\nA session saves the views of all windows plus global settings. It basically makes a snapshot of your current Vim instance and saves it in a session file. Let me stress this: it saves the current state; everything done after saving a session won't be part of the session file. To \"update\" a session, simply write it out again.\nThis makes it perfect for saving your projects and easy to switch between them.\nTry it right now! Open a few windows and tabs and do . If you omit the filename, will be assumed. The file will be saved to the current working directory, check . Restart Vim and do and voilà, the buffer list, window layout, mappings, working directory etc. should all be the same as before you saved the session. Do some more work and update the session by overwriting the already existing session file with .\nNote that a session file is really just a collection of Vim commands that are supposed to restore a certain state of a Vim instance, so feel free to take a look at it: .\nYou can tell Vim what things to save in a session by setting .\nFor scripting purposes Vim keeps the name of the last sourced or written session in the internal variable .\nHelp:",
-      "items": [],
-      "title": "Sessions"
-    },
-    {
-      "description": "Many of the concepts mentioned above also have local counterparts:\nVariables also have different scopes.",
-      "items": [],
-      "title": "Locality"
-    },
-    {
-      "description": "If you have an issue you can't resolve or are in need of general guidance, see the vim_use mailing list. Another great resource is using IRC. The channel on Freenode is huge and usually full of helpful people.\nIf you want to report a Vim bug, use the vim_dev mailing list.",
-      "items": [],
-      "title": "Getting help online"
-    },
-    {
-      "description": "You can trigger any event right now: .",
-      "items": [],
-      "title": "Autocmds in practice"
-    },
-    {
-      "description": "Especially for plugins it's useful to create your own \"User\" events:\nNow users of your plugin can execute anything when Chibby finishes running:\nBy the way, if there's no \"catching\" :autocmd, :doautocmd will output a pesky \"No matching autocommands\" message. That's why many plugins use instead. But this has the disadvantage, that you can't simply use in the :autocmd, you have to use instead..\nThat's why it's better to check if there even is a receiving autocmd and not bothering emitting the event otherwise:\nHelp:",
-      "items": [],
-      "title": "User events"
-    },
-    {
-      "description": "By default, autocmds do not nest! If an autocmd executes a command, which in turn would usually trigger another event, it won't happen.\nLet's say every time you start Vim, you want to automatically open your vimrc:\nWhen you now start Vim, it will open your vimrc, but the first thing you'll notice is that there won't be any highlighting although usually there would be.\nThe problem is that in your non-nested autocmd won't trigger the \"BufRead\" event, so the filetype never gets set to \"vim\" and never sourced. See . Use this instead:\nHelp:",
-      "items": [],
-      "title": "Nested autocmds"
-    },
-    {
-      "description": "Required features: and optionally if you want to use the option on a Unix system with a Vim that doesn't have GUI support.\nHelp:\nAlso see: Bracketed paste (or why do I have to set 'paste' all the time?)",
-      "items": [],
-      "title": "Clipboard"
-    },
-    {
-      "description": "Windows comes with a clipboard and macOS comes with a pasteboard.\nBoth work like most users would expect them to work. You copy selected text with / and paste them in another application with /.\nNote that copied text is actually transferred to the clipboard, so you can close the application you copied from before pasting in another application without problems.\nWhenever this happens, the clipboard register gets filled with the selection. From Vim use and to yank and paste from the clipboard respectively.\nIf you don't even want to specify the register all the time, put this in your vimrc:\nUsually all yank/delete/put operations fill the register, now the register is used for the same operations, therefore simply and will be enough.\nLet me repeat: Using the option above means that every yank/paste, even when only used in the same Vim window, will alter the clipboard. Decide for yourself if this is useful or not.\nIf you're even too lazy to type , you can send every visual selection to the clipboard by using these settings:\nHelp:",
-      "items": [],
-      "title": "Clipboard usage (Windows, macOS)"
-    },
-    {
-      "description": "If your OS uses X, things work a bit different. X implements the X Window System Protocol which happens to be at major version 11 since 1987, hence X is also often called X11.\nPrior, in X10, cut buffers were introduced that kind of worked like a clipboard as in copied text was actually held by X and it was accessible by all other applications. This mechanism still exists in X, but its use is deprecated now and most software doesn't use it anymore.\nNowadays data is transferred between applications by the means of selections. From the 3 selection atoms defined, only 2 are used in practice: PRIMARY and CLIPBOARD.\nSelections work roughly like this:\nNOTE: Selections (no, not even the CLIPBOARD selection) are never kept in the X server! Thus, you lose the data copied with when the application closes.\nUse to paste the PRIMARY selection or to yank the entire file to the CLIPBOARD selection.\nIf you happen to access one of the two registers all the time, consider using:\n(The is used to prepend to the default value, .)\nThis will make all yank/delete/put operations use either or instead of the unnamed register . Afterwards you can simply use or for accessing your chosen X selection.\nHelp:",
-      "items": [],
-      "title": "Clipboard usage (Linux, BSD, ...)"
-    },
-    {
-      "description": "When you open a file, the cursor will be positioned at line 1, column 1. Fortunately the viminfo file remembers marks. The mark contains the position in the buffer where you left off.\nRead: If the mark contains a line number greater than line 1 but not greater than the last line in the file, jump to it.",
-      "items": [],
-      "title": "Restore cursor position when opening file"
-    },
-    {
-      "description": "",
-      "items": [],
-      "title": "Temporary files"
-    },
-    {
-      "description": "When editing a file, unsaved changes get written to a swap file.\nGet the name of the current swap file with . Disable them with .\nA swap file gets updated either all 200 characters or when nothing was typed for 4 seconds. They get deleted when you stop editing the file. You can change these numbers with and .\nIf Vim gets killed (e.g. power outage), you lose all changes since the last time the file was written to disk, but the swap file won't be deleted. Now, if you edit the file again, Vim will offer the chance to recover the file from the swap file.\nWhen two people try to edit the same file, the second person will get a notice that the swap file already exists. It prevents people from trying to save different versions of a file. If you don't want that behaviour, see .",
-      "items": [],
-      "title": "Swap files"
-    },
-    {
-      "description": "The undo tree is kept in memory and will be lost when Vim quits. If you want it to persist, . This will save the undo file for in .",
-      "items": [],
-      "title": "Undo files"
-    },
-    {
-      "description": "When backup, swap, and undo files are all about text state, viminfo files are used for saving everything else that would otherwise be lost when quitting Vim. The viminfo file keeps histories (command line, search, input), registers, marks, buffer list, global variables etc.\nBy default, the viminfo is written to .",
-      "items": [],
-      "title": "Viminfo files"
-    },
-    {
-      "description": "Put all temporary files in their own directory under :",
-      "items": [],
-      "title": "Example configuration for temporary files"
-    },
-    {
-      "description": "Vim comes with the netrw plugin that enables editing remote files. Actually it transfers the remote file to a local temporary file via scp, opens a buffer using that file, and writes the changes back to the remote file on saving.\nThis is extremely useful if you want to use your local configuration opposed to ssh'ing into a server and use whatever the admins want you to use.\nIf you have a set up already, this gets used automatically:\nAssuming the above content in , this works just as well:\nSimilar can be done with a , see .\nMake sure to read and .\nAnother possibility is using sshfs which uses FUSE to mount a remote filesystem into your local filesystem.",
-      "items": [],
-      "title": "Editing remote files"
-    },
-    {
-      "description": "Pathogen was the first popular tool for managing plugins. Actually it just adjusts the runtimepath () to include all the things put under a certain directory. You have to clone the repositories of the plugins there yourself.\nReal plugin managers expose commands that help you to install and update plugins from within Vim.\nList of plugin managers",
-      "items": [],
-      "title": "Managing plugins"
-    },
-    {
-      "description": "This is a technique to insert the same text on multiple consecutive lines at the same time. See this demo.\nSwitch to visual block mode with . Afterwards go down for a few lines. Hit or and start entering your text.\nIt might be a bit confusing at first, but text is always entered for the current line and only after finishing the current insertion, the same text will be applied to all other lines of the prior visual selection.\nSo a simple example is .\nIf you have lines of different length and want to append the same text right after the end of each line, do this: .\nSometime you need to place the cursor somewhere after the end of the current line. You can't do that by default, but you can set the option:\nAfterwards or work even after the end of the line.\nSee for more info. It might seem complicated at first, but quickly becomes second nature.\nIf you want to get real fancy, have a look at multiple-cursors.",
-      "items": [],
-      "title": "Block insert"
-    },
-    {
-      "description": "Disclaimer: Vim is single-threaded, so running an external program in the foreground will block everything else. Sure, you can use one of Vim's programming interfaces, e.g. Lua, and use its thread support, but during that time the Vim process is blocked nevertheless. Neovim fixed that by adding a proper job API.\n(Apparently Bram is thinking about adding job control to Vim as well. If you have a very recent version, see .)\nUse to start a job. If you want to list the files in the current working directory, use . Use for piping in the shell as usual, e.g. .\nWithout a range, the output of will be shown in a scrollable window. On the other hand, if a range is given, these lines will be filtered. This means they will be piped to the stdin of the filter program and after processing be replaced by the stdout of the filter. E.g. for prepending numbers to the next 5 lines, use this:\nSince manually adding the range is quite burdensome, Vim also provides some helpers for convenience. As always with ranges, you can also select lines in visual mode and then hit . There's also an operator that takes a motion. E.g. will sort the lines of the current paragraph.\nA good use case for filtering is the Go programming language. The indentation is pretty opinionated, it even comes with a filter called for indenting Go source code properly. So plugins for Go often provide helper commands called that basically do , so they indent all lines in the file.\nPeople often use to put the output of prog below the current line, which is fine for scripts, but when doing it on the fly, I find it easier to use instead, which replaces the current line.",
-      "items": [],
-      "title": "Running external programs and using filters"
-    },
-    {
-      "description": "Do this in the root of your project:\nThis will create 3 files: in the current working directory. Think of them as your database.\nUnfortunately only analyzes files by default. If you want to use cscope for a Java project instead, do this:",
-      "items": [],
-      "title": "1. Build the database"
-    },
-    {
-      "description": "Open a connection to your freshly built database:\nVerify that the connection was made:\n(Yes, you can add multiple connections.)",
-      "items": [],
-      "title": "2. Add the database"
-    },
-    {
-      "description": "E.g. will list all functions that are called by .\nI suggest some convenience mappings e.g.:\nSo, when (or ) jumps to a definition from the tags file, does the same, but also takes connected cscope databases into account. The option makes act like automatically. This is very convenient if you already have tag-related mappings.\nHelp:",
-      "items": [],
-      "title": "3. Query the database"
-    },
-    {
-      "description": "Since Vim is written in C, a lot of features assume C-like syntax. By default, if your cursor is on or , you can use to jump to the corresponding or respectively.\nVim comes bundled with a plugin called matchit.vim which is not enabled by default. It makes also cycle through HTML tags, if/else/endif constructs in VimL etc. and introduces a few new commands.",
-      "items": [],
-      "title": "MatchIt"
-    },
-    {
-      "description": "",
-      "items": [],
-      "title": "Installation for Vim 8"
-    },
-    {
-      "description": "Since the documentation of matchit is pretty extensive, I suggest also doing the following once:",
-      "items": [],
-      "title": "Installation for Vim 7 and older"
-    },
-    {
-      "description": "The plugin is ready to use now. See for the supported commands and for the supported languages.\nThat said, it's easy to define your own matching pairs:\nAfterwards you can cycle through these 3 statements in any Python file by using (forward) or (backward).\nHelp:",
-      "items": [],
-      "title": "Small intro"
-    },
-    {
-      "description": "and in a visual selection make the cursor go to the other end. Try with blockwise selection to see the difference. This is useful for quickly changing the size of the selected text.",
-      "items": [],
-      "title": "Go to other end of selected text"
-    },
-    {
-      "description": "The direction of and depends on whether or was used for searching forward or backward respectively. This is pretty confusing to me.\nIf you want to always search forward and backward, use this:",
-      "items": [],
-      "title": "Saner behavior of n and N"
-    },
-    {
-      "description": "If you're anything like me, you're used to going to next and previous items via and respectively. By default, this also works in the command-line and recalls older or more recent command-lines from history.\nSo far, so good. But and are even smarter! They recall the command-line whose beginning matches the current command-line. E.g. may change to .\nOf course, I don't want you to reach for the arrow keys:\nHere we also distinguish between command-line history and the wildmenu. See .\nI depend on this behaviour several times a day.",
-      "items": [],
-      "title": "Saner command-line history"
-    },
-    {
-      "description": "By default, clears and redraws the screen (like ). The following mapping does the same, plus de-highlighting the matches found via , etc., plus fixing syntax highlighting (sometimes Vim loses highlighting due to complex highlighting rules), plus force updating the syntax highlighting in diff mode:",
-      "items": [],
-      "title": "Saner CTRL-L"
-    },
-    {
-      "description": "See Vim Wiki: Disable beeping.",
-      "items": [],
-      "title": "Disable audible and visual bells"
-    },
-    {
-      "description": "Sometimes I need a quick way to move the current line above or below:\nThese mappings also take a count, so moves the current line 2 lines below.",
-      "items": [],
-      "title": "Quickly move current line"
-    },
-    {
-      "description": "Now inserts 5 blank lines above the current line.",
-      "items": [],
-      "title": "Quickly add empty lines"
-    },
-    {
-      "description": "This is a real gem! The mapping takes a register (or by default) and opens it in the cmdline-window. Hit when you're done editing for setting the register.\nI often use this to correct typos I did while recording a macro.\nUse it like this or .\nNotice the use of to make sure that the is inserted literally. See .",
-      "items": [],
-      "title": "Quickly edit your macros"
-    },
-    {
-      "description": "This technique can probably be applied to many filetypes. It sets file marks (see ) when leaving a source or header file, so you can quickly jump back to the last accessed one by using or (see ).\nNOTE: The info is saved in the viminfo file, so make sure that includes .",
-      "items": [],
-      "title": "Quickly jump to header or source file"
-    },
-    {
-      "description": "I think this was taken from tpope's config:",
-      "items": [],
-      "title": "Quickly change font size in GUI"
-    },
-    {
-      "description": "I like to use a block cursor in normal mode, i-beam cursor in insert mode, and underline cursor in replace mode.\nThis simply tells Vim to print a certain sequence of characters (escape sequence) when entering/leaving insert mode. The underlying terminal, or programs like tmux that sit between Vim and the terminal, will process and evaluate it.\nThere's one drawback though: there are many terminal emulator implementations and not all use the same sequences for doing the same things. The sequences used above might not work with your implementation. Your implementation might not even support different cursor styles. Check the documentation.\nThe example above works with iTerm2.",
-      "items": [],
-      "title": "Change cursor style dependent on mode"
-    },
-    {
-      "description": "If you select one or more lines, you can use and for shifting them sidewards. Unfortunately you immediately lose the selection afterwards.\nYou can use to reselect the last selection (see ), thus you can work around it like this:\nNow you can use on your visual selection without any problems.\nNOTE: The same can be achieved using , which repeats the last change.",
-      "items": [],
-      "title": "Don't lose selection when shifting sidewards"
-    },
-    {
-      "description": "Using autocmds you can do anything on saving a file, e.g. sourcing it in case of a dotfile or running a linter to check for syntactical errors in your source code.",
-      "items": [],
-      "title": "Reload a file on saving"
-    },
-    {
-      "description": "I love the cursorline, but I only want to use it in the current window and not when being in insert mode:",
-      "items": [],
-      "title": "Smarter cursorline"
-    },
-    {
-      "description": "The keyword completion (/) tries completing whatever is listed in the option. By default, this also includes tags (which can be annoying) and scanning all included files (which can be very slow). If you can live without these things, disable them:",
-      "items": [],
-      "title": "Faster keyword completion"
-    },
-    {
-      "description": "Always use a dark gray statusline, no matter what colorscheme is chosen:\nThis triggers every time you use . If you want it to trigger only for a certain colorscheme:\nThis triggers only for .\nUseful commands that are good to know. Use to learn more about them, e.g. .",
-      "items": [],
-      "title": "Cosmetic changes to colorschemes"
-    },
-    {
-      "description": "Execute a command on all matching lines. E.g. will use on all lines that contain \"regexp\".\nFun fact: You probably all know good old grep, the filter program written by Ken Thompson. What does it do? It prints all lines matching a certain regular expression! Now guess the short form of ? That's right! It's . Ken Thompson was inspired by vi's when he wrote grep.\nDespite its name, only acts on all lines by default, but it also takes a range. Assume you want use on all lines from the current line to the next blank line (matched by the regular expression ) that contain \"foo\":\nFor executing commands on all lines that do not match a given pattern, use or its alias (think inVerse) instead.",
-      "items": [],
-      "title": ":global and :vglobal"
-    },
-    {
-      "description": "These commands are commonly used in Vim scripts.\nWith you can do normal mode mappings from the command-line. E.g. will make the cursor go down 4 lines (without using any custom mapping for \"j\" due to the \"!\").\nMind that also takes a range, so would prepend \"abc\" to every line.\nWith you can mix commands with expressions. Assume you edit a C source file and want to switch to its header file:\nBoth commands are often used together. Assume you want to make the cursor go down \"n\" lines:",
-      "items": [],
-      "title": ":normal and :execute"
-    },
-    {
-      "description": "Many commands print messages and allows to redirect that output. You can redirect to files, registers or variables.\nIn Vim 8 there is an even shorter way:\nHelp:",
-      "items": [],
-      "title": ":redir and execute()"
-    },
-    {
-      "description": "If you encounter a strange behaviour, try reproducing it like this:\nThis will start Vim without vimrc (thus default settings) and in nocompatible mode (which makes it use Vim defaults instead of vi defaults). (See for other combinations of what to load at start.)\nIf you can still reproduce it now, it's most likely a bug in Vim itself! Report it to the vim_dev mailing list. Most of the time the issue won't be resolved at this time and you'll have to further investigate.\nPlugins often introduce new/changed/faulty behaviour. E.g. if it happens on saving, check to get a list of potential culprits.\nIf you're using a plugin manager, comment them out until you find the culprit.\nIssue is still not resolved? If it's not a plugin, it must be your other settings, so maybe your options or autocmds etc.\nTime to use binary search. Repeatedly split the search space in two until you find the culprit line. Due to the nature of binary division, it won't take many steps.\nIn practice, it works like this: Put the command in the middle of your vimrc. Vim will skip everything after it. If it still happens, the problem is in the active upper half. Move the to the middle of that half. Otherwise, the issue is in the inactive lower half. Move the to the middle of that half. And so on.",
-      "items": [],
-      "title": "General tips"
-    },
-    {
-      "description": "Another useful way for observing what Vim is currently doing is increasing the verbosity level. Currently Vim supports 9 different levels. See for the full list.\nThis would show all the files that get sourced, e.g. the undo file or various plugins that act on saving.\nIf you only want increase verbosity for a single command, there's also , which simply gets put in front of any other command. It takes the verbosity level as count and defaults to 1:\nIt's very often used with its default verbosity level 1 to show where an option was set last:\nNaturally, the higher the verbosity level the more overwhelming the output. But fear no more, you can simply redirect the output to a file:\nYou can also enable verbosity at starting time, with the option. It defaults to verbosity level 10. E.g. .",
-      "items": [],
-      "title": "Verbosity"
-    },
-    {
-      "description": "Vim startup feels slow? Time to crunch some numbers:\nThe first column is the most important as it shows the elapsed absolute time. If there is a big jump in time between two lines, the second line is either a very big file or a file with faulty VimL code that is worth investigating.",
-      "items": [],
-      "title": "Profiling startup time"
-    },
-    {
-      "description": "Required feature:\nVim provides a built-in capability for profiling at runtime and is a great way to find slow code in your environment.\nThe command takes a bunch of sub-commands for specifying what to profile.\nIf you want to profile everything, do this:\nVim keeps the profiling information in memory and only writes it out to the logfile on exit. (Neovim has fixed this using ).\nHave a look at . All code that was executed during profiling will be shown. Every line, how often it was executed and how much time it took.\nJump to the bottom of the log. Here are two different sections and that are worth gold. At a quick glance you can see which functions are taking the longest.\nYou can use during startup as well:",
-      "items": [],
-      "title": "Profiling at runtime"
-    },
-    {
-      "description": "If you ever used a command-line debugger before, will quickly feel familiar.\nSimply prepend to any other command and you'll be put into debug mode. That is, the execution will stop at the first line about to be executed and that line will be displayed.\nSee and below for the 6 available debugger commands and note that, like in gdb and similar debuggers, you can also use their short forms: , , , , , and .\nApart from that those, you're free to use any Vim command, e.g. , which gets executed in the context of the current position in the code.\nYou basically get a REPL by simply using .\nIt would be a pain if you had to single-step through every single line, so of course we can define breakpoints, too. (Breakpoints are called breakpoints, because the execution stops when they're hit, thus you can simply skip code you're not interested in.) See , , and for further details.\nLet's assume you want to know what code is run every time you save a file:\nAs you can see, using will repeat the previous debugger command, in this case.\ncan be used in combination with the verbose option.",
-      "items": [],
-      "title": "Debugging Vim scripts"
-    },
-    {
-      "description": "Syntax files are often the cause for slowdowns due to wrong and/or complex regular expressions. If the feature is compiled in, Vim provides the super useful command.\nThe output contains important metrics. E.g. you can see which regexp takes too long and should be optimized or which regexps are used all the time but never even match.\nSee .",
-      "items": [],
-      "title": "Debugging syntax files"
-    },
-    {
-      "description": "",
-      "items": [],
-      "title": "Additional resources"
-    },
-    {
-      "description": "Vim distributions are bundles of custom settings and plugins for Vim.\nMore advanced users know how to configure their editor anyway, so distributions are mostly targeted at beginners. If you think about that, it's quite paradoxical though: Making it easier by adding even more things to learn about?\nI know that many people don't want to spend hours and hours on customizing an editor (and actually you never stop customizing your vimrc when you finally got hooked), but eventually you only get efficient in Vim when you take the time to learn it properly.\nRepeat after me: \"A programmer should know their tools.\"\nAnyway, if you know what you're doing, you might draw some inspiration from looking at a few distributions:",
+      "description": null,
       "items": [
         {
-          "node_type": "item",
-          "title": "spacevim",
-          "description": null,
-          "children": [],
-          "repo_info": {
-            "archived": true,
-            "language": "Vim Script",
-            "last_commit": "2025-02-17T14:14:00Z",
-            "owner": "wsdjeg",
-            "repo": "SpaceVim",
-            "stars": 20221
-          }
-        },
-        {
-          "node_type": "item",
-          "title": "spf13",
-          "description": null,
-          "children": [],
-          "repo_info": {
-            "archived": false,
-            "language": "Vim Script",
-            "last_commit": "2026-06-12T05:24:58Z",
-            "owner": "spf13",
-            "repo": "spf13-vim",
-            "stars": 15482
-          }
-        },
-        {
-          "node_type": "item",
-          "title": "janus",
-          "description": null,
-          "children": [],
-          "repo_info": {
-            "archived": false,
-            "language": "Vim script",
-            "last_commit": "2022-04-09T17:39:09Z",
-            "owner": "carlhuda",
-            "repo": "janus",
-            "stars": 7845
-          }
+          "children": [
+            {
+              "node_type": "item",
+              "title": "spacevim",
+              "description": null,
+              "children": [],
+              "repo_info": {
+                "archived": true,
+                "id": 77358263,
+                "language": "Vim Script",
+                "last_commit": "2025-02-17T14:14:00Z",
+                "owner": "wsdjeg",
+                "repo": "SpaceVim",
+                "stars": 20221
+              }
+            },
+            {
+              "node_type": "item",
+              "title": "spf13",
+              "description": null,
+              "children": [],
+              "repo_info": {
+                "archived": false,
+                "id": 619849,
+                "language": "Vim Script",
+                "last_commit": "2026-06-12T05:24:58Z",
+                "owner": "spf13",
+                "repo": "spf13-vim",
+                "stars": 15482
+              }
+            },
+            {
+              "node_type": "item",
+              "title": "janus",
+              "description": null,
+              "children": [],
+              "repo_info": {
+                "archived": false,
+                "id": 825237,
+                "language": "Vim script",
+                "last_commit": "2022-04-09T17:39:09Z",
+                "owner": "carlhuda",
+                "repo": "janus",
+                "stars": 7845
+              }
+            }
+          ],
+          "description": "Vim distributions are bundles of custom settings and plugins for Vim.\nMore advanced users know how to configure their editor anyway, so distributions are mostly targeted at beginners. If you think about that, it's quite paradoxical though: Making it easier by adding even more things to learn about?\nI know that many people don't want to spend hours and hours on customizing an editor (and actually you never stop customizing your vimrc when you finally got hooked), but eventually you only get efficient in Vim when you take the time to learn it properly.\nRepeat after me: \"A programmer should know their tools.\"\nAnyway, if you know what you're doing, you might draw some inspiration from looking at a few distributions:",
+          "node_type": "group",
+          "title": "Vim distributions"
         }
       ],
-      "title": "Vim distributions"
-    },
-    {
-      "description": "Many people are surprised by the fact that Vim comes with a handful of standard plugins. Some get loaded by default () and some are not (). Read on how to source the latter.\nMost of the plugins that get loaded by default will never get used, though. Disable them as you see fit. They will still be shown as sourced (), but only the first lines actually get read before Vim bails out. No further code (mappings, commands, logic) will be processed.",
-      "items": [],
-      "title": "Standard plugins"
-    },
-    {
-      "description": "CapsLock belongs to the most useless keys on your keyboard, but it's much easier to reach than the Control key, since it lies on your home row. Mapping CapsLock to Control is a great way to prevent or at least reduce RSI if you program a lot.\nAttention: When you get used to it, you can't live without it anymore.\nmacOS:\n. Change \"CapsLock\" to \"Control\".\nLinux:\nTo change the keys in X, put this in your :\nAfterwards source it via .\nAn alternative would be using caps2esc or xcape.\nWindows:\nSee superuser.com: Map Caps-Lock to Control in Windows 8.1.",
-      "items": [],
-      "title": "Map CapsLock to Control"
-    },
-    {
-      "description": "Generate HTML from any buffer using from the 2html standard plugin. The output can be used for printing or easy web publishing.\nThe command creates a new buffer of the same name with appended. The colors are the same as seen in Vim. They depend on the colorscheme.\nThe plugin knows several options to finetune the output, e.g. for setting the encoding and font.\nSee .",
-      "items": [],
-      "title": "Generating HTML from buffer"
-    },
-    {
-      "description": "",
-      "items": [],
-      "title": "Easter eggs"
-    },
-    {
-      "description": "When Bill Joy created vi, a predecessor of Vim, he did it on a ADM-3A which had no extra cursor buttons but used, you might already guessed it, hjkl instead.\nKeyboard layout: click\nThis also shows why is used to denote the home directory on Unix systems.",
-      "items": [],
-      "title": "Why hjkl for navigation?"
-    },
-    {
-      "description": "The biggest issue with big files is, that Vim reads the whole file at once. This is done due to how buffers are represented internally. (Discussion on vim_dev@)\nIf you only want to read, is a good workaround.\nIf you can live without syntax, settings and plugins for the moment:\nThis should make navigation quite a lot faster, especially since no expensive regular expressions for syntax highlighting are used. You should also tell Vim not to use swapfiles and viminfo files to avoid long delays on writing:\nPutting it in a nutshell, try to avoid using Vim when intending to write really huge files. :\\",
-      "items": [],
-      "title": "Editing huge files is slow"
-    },
-    {
-      "description": "Bracketed paste mode allows terminal emulators to distinguish between typed text and pasted text.\nDid you ever tried pasting code into Vim and afterwards everything seemed messed up?\nThis only happens if you paste via , , etc. because then you're just throwing text at the terminal emulator. Vim doesn't know that you just pasted the text, it thinks you're an extremely fast typist. Accordingly, it tries to indent the lines and fails.\nObviously this is not an issue, if you paste using Vim's registers, e.g. , because then Vim knows that you're actually pasting.\nTo workaround this, you have to , so it gets pasted as-is. See and .\nIf you're fed up with toggling all the time, have a look at this fine plugin that does it for you: bracketed-paste.\nAdditional read from the same author as the plugin: here.\nNeovim: Neovim tries to make all of this much more seamless and sets bracketed paste mode automatically if the terminal emulator supports it.",
-      "items": [],
-      "title": "Bracketed paste (or why do I have to set 'paste' all the time?)"
-    },
-    {
-      "description": "NUL characters () in a file, are stored as newline () in memory and displayed in a buffer as .\nSee and for more information.",
-      "items": [],
-      "title": "Newline used for NUL"
-    },
-    {
-      "description": ", , and all refer to the same thing: The programming language used for scripting Vim. Even though 8.0.360 changed all references from to , which can now be considered the official term, is still widespread all over the internet.\nNo matter which term you use, everyone will understand it.",
-      "items": [],
-      "title": "Vim script? Vimscript? VimL?"
+      "title": "Miscellaneous"
     }
   ],
   "metadata": {
-    "last_updated": "2026-08-18T19:39:51.189Z",
+    "last_updated": "2026-08-19T13:00:06.104Z",
     "original_repository": "mhinz/vim-galore",
+    "original_repository_id": 49010787,
     "original_repository_sha": "604f1a6f39705a83c02dd94b7ff2db1d3ff136f7",
     "enhanced_repository": "enhansome/enhansome-vim-galore",
     "enhanced_repository_description": null,
