@@ -156,7 +156,7 @@ Discussions and user questions are best done on the
 [vim\_use](https://groups.google.com/forum/#!forum/vim_use) mailing list or using
 IRC ([Freenode](https://freenode.net)) in the `#vim` channel.
 
-Development happens on [GitHub](https://github.com/vim/vim) ⭐ 40,778 | 🐛 1,630 | 🌐 Vim Script | 📅 2026-08-20, discussions on the
+Development happens on [GitHub](https://github.com/vim/vim) ⭐ 40,779 | 🐛 1,625 | 🌐 Vim Script | 📅 2026-08-21, discussions on the
 [vim\_dev](https://groups.google.com/forum/#!forum/vim_dev) mailing list.
 
 Read [Why, oh WHY, do those #?@! nutheads use
@@ -241,7 +241,7 @@ for yourself. :-)
 So here it is: [minimal-vimrc](static/minimal-vimrc.vim)
 
 In case you're interested, here's
-[my vimrc](https://github.com/mhinz/dotfiles/blob/master/.vim/vimrc) ⭐ 320 | 🐛 0 | 🌐 Shell | 📅 2021-05-17.
+[my vimrc](https://github.com/mhinz/dotfiles/blob/master/.vim/vimrc) ⭐ 321 | 🐛 0 | 🌐 Shell | 📅 2021-05-17.
 
 **TIP**: Most plugin authors maintain several plugins and also publish their
 vimrc on GitHub (often in a repository called "vim-config" or "dotfiles"), so
@@ -890,7 +890,7 @@ The undo tree is kept in memory and will be lost when Vim quits. See [Undo
 files](#undo-files) for how to enable persistent undo.
 
 If you're confused by the undo tree,
-[undotree](https://github.com/mbbill/undotree) ⭐ 4,541 | 🐛 44 | 🌐 Vim Script | 📅 2026-03-08 does a great job at visualizing
+[undotree](https://github.com/mbbill/undotree) ⭐ 4,540 | 🐛 44 | 🌐 Vim Script | 📅 2026-03-08 does a great job at visualizing
 it.
 
 Help:
@@ -1712,7 +1712,7 @@ mount a remote filesystem into your local filesystem.
 
 ## Managing plugins
 
-[Pathogen](https://github.com/tpope/vim-pathogen) ⭐ 12,130 | 🐛 27 | 🌐 Vim Script | 📅 2022-08-24 was the first popular tool for
+[Pathogen](https://github.com/tpope/vim-pathogen) ⭐ 12,128 | 🐛 27 | 🌐 Vim Script | 📅 2022-08-24 was the first popular tool for
 managing plugins. Actually it just adjusts the *runtimepath* (`:h 'rtp'`) to
 include all the things put under a certain directory. You have to clone the
 repositories of the plugins there yourself.
@@ -1967,7 +1967,7 @@ chances are your terminal emulator doesn't support true colors or your
 colorcheme has no GUI colors defined.
 
 Many people use the terminal multiplexer
-[tmux](https://github.com/tmux/tmux/wiki) ⭐ 48,746 | 🐛 25 | 🌐 C | 📅 2026-08-20 which basically sits in between the
+[tmux](https://github.com/tmux/tmux/wiki) ⭐ 48,750 | 🐛 27 | 🌐 C | 📅 2026-08-21 which basically sits in between the
 terminal emulator and Vim. To make tmux *forward* the true color escape
 sequences emitted by Vim, you have to put the following in the user's
 `.tmux.conf`:
@@ -2821,7 +2821,7 @@ See `man 7 ascii` and `:h NL-used-for-Nul` for more information.
 
 `Vim script`, `Vimscript`, and `VimL` all refer to the same thing: The
 programming language used for scripting Vim. Even though
-[8.0.360](https://github.com/vim/vim/commit/b544f3c81f1e6a50322855681ac266ffaa8e313c) ⭐ 40,778 | 🐛 1,630 | 🌐 Vim Script | 📅 2026-08-20
+[8.0.360](https://github.com/vim/vim/commit/b544f3c81f1e6a50322855681ac266ffaa8e313c) ⭐ 40,779 | 🐛 1,625 | 🌐 Vim Script | 📅 2026-08-21
 changed all references from `VimL` to `Vim script`, which can now be considered
 the official term, `VimL` is still widespread all over the internet.
 
@@ -2829,4 +2829,4 @@ No matter which term you use, everyone will understand it.
 
 ***
 
-> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-08-20._
+> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-08-21._
