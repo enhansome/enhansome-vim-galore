@@ -156,7 +156,7 @@ Discussions and user questions are best done on the
 [vim\_use](https://groups.google.com/forum/#!forum/vim_use) mailing list or using
 IRC ([Freenode](https://freenode.net)) in the `#vim` channel.
 
-Development happens on [GitHub](https://github.com/vim/vim) ⭐ 40,793 | 🐛 1,629 | 🌐 Vim Script | 📅 2026-08-23, discussions on the
+Development happens on [GitHub](https://github.com/vim/vim) ⭐ 40,795 | 🐛 1,627 | 🌐 Vim Script | 📅 2026-08-25, discussions on the
 [vim\_dev](https://groups.google.com/forum/#!forum/vim_dev) mailing list.
 
 Read [Why, oh WHY, do those #?@! nutheads use
@@ -890,7 +890,7 @@ The undo tree is kept in memory and will be lost when Vim quits. See [Undo
 files](#undo-files) for how to enable persistent undo.
 
 If you're confused by the undo tree,
-[undotree](https://github.com/mbbill/undotree) ⭐ 4,538 | 🐛 44 | 🌐 Vim Script | 📅 2026-03-08 does a great job at visualizing
+[undotree](https://github.com/mbbill/undotree) ⭐ 4,539 | 🐛 44 | 🌐 Vim Script | 📅 2026-03-08 does a great job at visualizing
 it.
 
 Help:
@@ -1967,7 +1967,7 @@ chances are your terminal emulator doesn't support true colors or your
 colorcheme has no GUI colors defined.
 
 Many people use the terminal multiplexer
-[tmux](https://github.com/tmux/tmux/wiki) ⭐ 48,799 | 🐛 30 | 🌐 C | 📅 2026-08-25 which basically sits in between the
+[tmux](https://github.com/tmux/tmux/wiki) ⭐ 48,817 | 🐛 32 | 🌐 C | 📅 2026-08-25 which basically sits in between the
 terminal emulator and Vim. To make tmux *forward* the true color escape
 sequences emitted by Vim, you have to put the following in the user's
 `.tmux.conf`:
@@ -2821,7 +2821,7 @@ See `man 7 ascii` and `:h NL-used-for-Nul` for more information.
 
 `Vim script`, `Vimscript`, and `VimL` all refer to the same thing: The
 programming language used for scripting Vim. Even though
-[8.0.360](https://github.com/vim/vim/commit/b544f3c81f1e6a50322855681ac266ffaa8e313c) ⭐ 40,793 | 🐛 1,629 | 🌐 Vim Script | 📅 2026-08-23
+[8.0.360](https://github.com/vim/vim/commit/b544f3c81f1e6a50322855681ac266ffaa8e313c) ⭐ 40,795 | 🐛 1,627 | 🌐 Vim Script | 📅 2026-08-25
 changed all references from `VimL` to `Vim script`, which can now be considered
 the official term, `VimL` is still widespread all over the internet.
 
