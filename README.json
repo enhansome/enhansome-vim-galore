@@ -17,7 +17,7 @@
                 "last_commit": "2025-02-17T14:14:00Z",
                 "owner": "wsdjeg",
                 "repo": "SpaceVim",
-                "stars": 20216
+                "stars": 20217
               }
             },
             {
@@ -60,7 +60,7 @@
     }
   ],
   "metadata": {
-    "last_updated": "2026-08-25T19:45:05.873Z",
+    "last_updated": "2026-08-26T21:50:03.625Z",
     "original_repository": "mhinz/vim-galore",
     "original_repository_id": 49010787,
     "original_repository_sha": "604f1a6f39705a83c02dd94b7ff2db1d3ff136f7",
