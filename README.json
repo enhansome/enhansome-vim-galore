@@ -18,7 +18,8 @@
                 "owner": "wsdjeg",
                 "repo": "SpaceVim",
                 "stars": 20216
-              }
+              },
+              "first_seen": "2026-08-29T02:10:18.517Z"
             },
             {
               "node_type": "item",
@@ -33,7 +34,8 @@
                 "owner": "spf13",
                 "repo": "spf13-vim",
                 "stars": 15482
-              }
+              },
+              "first_seen": "2026-08-29T02:10:18.517Z"
             },
             {
               "node_type": "item",
@@ -48,7 +50,8 @@
                 "owner": "carlhuda",
                 "repo": "janus",
                 "stars": 7845
-              }
+              },
+              "first_seen": "2026-08-29T02:10:18.517Z"
             }
           ],
           "description": "Vim distributions are bundles of custom settings and plugins for Vim.\nMore advanced users know how to configure their editor anyway, so distributions are mostly targeted at beginners. If you think about that, it's quite paradoxical though: Making it easier by adding even more things to learn about?\nI know that many people don't want to spend hours and hours on customizing an editor (and actually you never stop customizing your vimrc when you finally got hooked), but eventually you only get efficient in Vim when you take the time to learn it properly.\nRepeat after me: \"A programmer should know their tools.\"\nAnyway, if you know what you're doing, you might draw some inspiration from looking at a few distributions:",
@@ -60,7 +63,7 @@
     }
   ],
   "metadata": {
-    "last_updated": "2026-08-28T03:34:37.061Z",
+    "last_updated": "2026-08-29T02:10:18.517Z",
     "original_repository_info": {
       "archived": false,
       "id": 49010787,
@@ -68,7 +71,7 @@
       "last_commit": "2023-12-22T22:15:38Z",
       "owner": "mhinz",
       "repo": "vim-galore",
-      "stars": 17963
+      "stars": 17965
     },
     "original_repository_sha": "604f1a6f39705a83c02dd94b7ff2db1d3ff136f7",
     "enhanced_repository": "enhansome/enhansome-vim-galore",
