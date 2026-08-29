@@ -156,7 +156,7 @@ Discussions and user questions are best done on the
 [vim\_use](https://groups.google.com/forum/#!forum/vim_use) mailing list or using
 IRC ([Freenode](https://freenode.net)) in the `#vim` channel.
 
-Development happens on [GitHub](https://github.com/vim/vim) ⭐ 40,818 | 🐛 1,634 | 🌐 Vim Script | 📅 2026-08-28, discussions on the
+Development happens on [GitHub](https://github.com/vim/vim) ⭐ 40,818 | 🐛 1,636 | 🌐 Vim Script | 📅 2026-08-29, discussions on the
 [vim\_dev](https://groups.google.com/forum/#!forum/vim_dev) mailing list.
 
 Read [Why, oh WHY, do those #?@! nutheads use
@@ -1967,7 +1967,7 @@ chances are your terminal emulator doesn't support true colors or your
 colorcheme has no GUI colors defined.
 
 Many people use the terminal multiplexer
-[tmux](https://github.com/tmux/tmux/wiki) ⭐ 48,886 | 🐛 33 | 🌐 C | 📅 2026-08-28 which basically sits in between the
+[tmux](https://github.com/tmux/tmux/wiki) ⭐ 48,889 | 🐛 33 | 🌐 C | 📅 2026-08-28 which basically sits in between the
 terminal emulator and Vim. To make tmux *forward* the true color escape
 sequences emitted by Vim, you have to put the following in the user's
 `.tmux.conf`:
@@ -2821,7 +2821,7 @@ See `man 7 ascii` and `:h NL-used-for-Nul` for more information.
 
 `Vim script`, `Vimscript`, and `VimL` all refer to the same thing: The
 programming language used for scripting Vim. Even though
-[8.0.360](https://github.com/vim/vim/commit/b544f3c81f1e6a50322855681ac266ffaa8e313c) ⭐ 40,818 | 🐛 1,634 | 🌐 Vim Script | 📅 2026-08-28
+[8.0.360](https://github.com/vim/vim/commit/b544f3c81f1e6a50322855681ac266ffaa8e313c) ⭐ 40,818 | 🐛 1,636 | 🌐 Vim Script | 📅 2026-08-29
 changed all references from `VimL` to `Vim script`, which can now be considered
 the official term, `VimL` is still widespread all over the internet.
 

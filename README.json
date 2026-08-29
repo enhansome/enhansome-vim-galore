@@ -12,12 +12,24 @@
               "children": [],
               "repo_info": {
                 "archived": true,
+                "description": "A modular configuration of Vim and Neovim",
+                "homepage": "https://spacevim.org/",
                 "id": 77358263,
                 "language": "Vim Script",
+                "license": "GPL-3.0",
                 "last_commit": "2025-02-17T14:14:00Z",
+                "open_issues": 5,
                 "owner": "wsdjeg",
                 "repo": "SpaceVim",
-                "stars": 20216
+                "stars": 20216,
+                "topics": [
+                  "neovim",
+                  "neovim-plugin",
+                  "spacevim",
+                  "vim",
+                  "vim-plugin",
+                  "vimrc"
+                ]
               },
               "first_seen": "2026-08-29T02:10:18.517Z"
             },
@@ -28,12 +40,17 @@
               "children": [],
               "repo_info": {
                 "archived": false,
+                "description": "The ultimate vim distribution",
+                "homepage": "http://vim.spf13.com",
                 "id": 619849,
                 "language": "Vim Script",
+                "license": "Apache-2.0",
                 "last_commit": "2026-06-12T05:24:58Z",
+                "open_issues": 348,
                 "owner": "spf13",
                 "repo": "spf13-vim",
-                "stars": 15482
+                "stars": 15482,
+                "topics": []
               },
               "first_seen": "2026-08-29T02:10:18.517Z"
             },
@@ -44,12 +61,17 @@
               "children": [],
               "repo_info": {
                 "archived": false,
+                "description": "Vim distribution",
+                "homepage": null,
                 "id": 825237,
                 "language": "Vim script",
+                "license": null,
                 "last_commit": "2022-04-09T17:39:09Z",
+                "open_issues": 97,
                 "owner": "carlhuda",
                 "repo": "janus",
-                "stars": 7845
+                "stars": 7845,
+                "topics": []
               },
               "first_seen": "2026-08-29T02:10:18.517Z"
             }
@@ -63,15 +85,32 @@
     }
   ],
   "metadata": {
-    "last_updated": "2026-08-29T02:10:18.517Z",
+    "last_updated": "2026-08-29T04:14:44.565Z",
     "original_repository_info": {
       "archived": false,
+      "description": ":mortar_board: All things Vim!",
+      "homepage": null,
       "id": 49010787,
       "language": "Vim script",
+      "license": "CC-BY-SA-4.0",
       "last_commit": "2023-12-22T22:15:38Z",
+      "open_issues": 13,
       "owner": "mhinz",
       "repo": "vim-galore",
-      "stars": 17965
+      "stars": 17965,
+      "topics": [
+        "awesome",
+        "awesome-list",
+        "guide",
+        "help",
+        "learn",
+        "neovim",
+        "tips",
+        "tricks",
+        "vim",
+        "vim-scripts",
+        "viml"
+      ]
     },
     "original_repository_sha": "604f1a6f39705a83c02dd94b7ff2db1d3ff136f7",
     "enhanced_repository": "enhansome/enhansome-vim-galore",
