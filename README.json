@@ -49,7 +49,7 @@
                 "open_issues": 348,
                 "owner": "spf13",
                 "repo": "spf13-vim",
-                "stars": 15482,
+                "stars": 15486,
                 "topics": []
               },
               "first_seen": "2026-08-29T02:10:18.517Z"
@@ -70,7 +70,7 @@
                 "open_issues": 97,
                 "owner": "carlhuda",
                 "repo": "janus",
-                "stars": 7845,
+                "stars": 7844,
                 "topics": []
               },
               "first_seen": "2026-08-29T02:10:18.517Z"
@@ -85,7 +85,7 @@
     }
   ],
   "metadata": {
-    "last_updated": "2026-08-29T21:43:12.389Z",
+    "last_updated": "2026-08-30T21:54:21.514Z",
     "original_repository_info": {
       "archived": false,
       "description": ":mortar_board: All things Vim!",
