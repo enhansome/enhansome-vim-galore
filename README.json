@@ -49,7 +49,7 @@
                 "open_issues": 347,
                 "owner": "spf13",
                 "repo": "spf13-vim",
-                "stars": 15483,
+                "stars": 15480,
                 "topics": []
               },
               "first_seen": "2026-08-29T02:10:18.517Z"
@@ -85,7 +85,7 @@
     }
   ],
   "metadata": {
-    "last_updated": "2026-09-04T21:27:45.932Z",
+    "last_updated": "2026-09-05T21:13:59.041Z",
     "original_repository_info": {
       "archived": false,
       "description": ":mortar_board: All things Vim!",
