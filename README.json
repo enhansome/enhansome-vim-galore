@@ -21,7 +21,7 @@
                 "open_issues": 5,
                 "owner": "wsdjeg",
                 "repo": "SpaceVim",
-                "stars": 20199,
+                "stars": 20198,
                 "topics": [
                   "neovim",
                   "neovim-plugin",
@@ -85,7 +85,7 @@
     }
   ],
   "metadata": {
-    "last_updated": "2026-09-20T21:32:07.924Z",
+    "last_updated": "2026-09-21T22:34:30.085Z",
     "original_repository_info": {
       "archived": false,
       "description": ":mortar_board: All things Vim!",
