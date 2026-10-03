@@ -8,7 +8,7 @@
             {
               "node_type": "item",
               "title": "spacevim",
-              "description": null,
+              "description": "wsdjeg/SpaceVim",
               "children": [],
               "repo_info": {
                 "archived": true,
@@ -36,7 +36,7 @@
             {
               "node_type": "item",
               "title": "spf13",
-              "description": null,
+              "description": "spf13/spf13-vim",
               "children": [],
               "repo_info": {
                 "archived": false,
@@ -57,7 +57,7 @@
             {
               "node_type": "item",
               "title": "janus",
-              "description": null,
+              "description": "carlhuda/janus",
               "children": [],
               "repo_info": {
                 "archived": false,
@@ -85,7 +85,7 @@
     }
   ],
   "metadata": {
-    "last_updated": "2026-10-02T22:57:08.492Z",
+    "last_updated": "2026-10-03T05:14:19.853Z",
     "original_repository_info": {
       "archived": false,
       "description": ":mortar_board: All things Vim!",
@@ -97,7 +97,7 @@
       "open_issues": 13,
       "owner": "mhinz",
       "repo": "vim-galore",
-      "stars": 18007,
+      "stars": 18009,
       "topics": [
         "awesome",
         "awesome-list",
