@@ -21,7 +21,7 @@
                 "open_issues": 5,
                 "owner": "wsdjeg",
                 "repo": "SpaceVim",
-                "stars": 20186,
+                "stars": 20185,
                 "topics": [
                   "neovim",
                   "neovim-plugin",
@@ -49,7 +49,7 @@
                 "open_issues": 347,
                 "owner": "spf13",
                 "repo": "spf13-vim",
-                "stars": 15467,
+                "stars": 15466,
                 "topics": []
               },
               "first_seen": "2026-08-29T02:10:18.517Z"
@@ -70,7 +70,7 @@
                 "open_issues": 97,
                 "owner": "carlhuda",
                 "repo": "janus",
-                "stars": 7840,
+                "stars": 7839,
                 "topics": []
               },
               "first_seen": "2026-08-29T02:10:18.517Z"
@@ -85,7 +85,7 @@
     }
   ],
   "metadata": {
-    "last_updated": "2026-10-19T22:53:56.591Z",
+    "last_updated": "2026-10-20T22:16:51.923Z",
     "original_repository_info": {
       "archived": false,
       "description": ":mortar_board: All things Vim!",
@@ -97,7 +97,7 @@
       "open_issues": 13,
       "owner": "mhinz",
       "repo": "vim-galore",
-      "stars": 18019,
+      "stars": 18020,
       "topics": [
         "awesome",
         "awesome-list",
