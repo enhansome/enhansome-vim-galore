@@ -156,7 +156,7 @@ Discussions and user questions are best done on the
 [vim\_use](https://groups.google.com/forum/#!forum/vim_use) mailing list or using
 IRC ([Freenode](https://freenode.net)) in the `#vim` channel.
 
-Development happens on [GitHub](https://github.com/vim/vim) ⭐ 41,350 | 🐛 1,795 | 🌐 Vim Script | 📅 2026-11-15, discussions on the
+Development happens on [GitHub](https://github.com/vim/vim) ⭐ 41,294 | 🐛 1,816 | 🌐 Vim Script | 📅 2026-11-15, discussions on the
 [vim\_dev](https://groups.google.com/forum/#!forum/vim_dev) mailing list.
 
 Read [Why, oh WHY, do those #?@! nutheads use
@@ -890,7 +890,7 @@ The undo tree is kept in memory and will be lost when Vim quits. See [Undo
 files](#undo-files) for how to enable persistent undo.
 
 If you're confused by the undo tree,
-[undotree](https://github.com/mbbill/undotree) ⭐ 4,555 | 🐛 44 | 🌐 Vim Script | 📅 2026-03-08 does a great job at visualizing
+[undotree](https://github.com/mbbill/undotree) ⭐ 4,556 | 🐛 44 | 🌐 Vim Script | 📅 2026-03-08 does a great job at visualizing
 it.
 
 Help:
@@ -1084,7 +1084,7 @@ Vim distinguishes between several types of fold methods:
 
 **NOTE**: Folding can be computationally intensive! If you experience any
 performance drawbacks (small delays when typing), have a look at
-[FastFold](https://github.com/Konfekt/FastFold) ⭐ 698 | 🐛 13 | 🌐 Vim Script | 📅 2025-06-04, which prevents Vim from
+[FastFold](https://github.com/Konfekt/FastFold) ⭐ 698 | 🐛 13 | 🌐 Vim Script | 📅 2026-11-16, which prevents Vim from
 updating folds when it's not needed.
 
 Help:
@@ -1967,7 +1967,7 @@ chances are your terminal emulator doesn't support true colors or your
 colorcheme has no GUI colors defined.
 
 Many people use the terminal multiplexer
-[tmux](https://github.com/tmux/tmux/wiki) ⭐ 50,329 | 🐛 47 | 🌐 C | 📅 2026-11-14 which basically sits in between the
+[tmux](https://github.com/tmux/tmux/wiki) ⭐ 50,417 | 🐛 46 | 🌐 C | 📅 2026-11-17 which basically sits in between the
 terminal emulator and Vim. To make tmux *forward* the true color escape
 sequences emitted by Vim, you have to put the following in the user's
 `.tmux.conf`:
@@ -2669,7 +2669,7 @@ There are two things which can have a huge impact on performance:
 | `:set cursorline`        | Causes all lines to redraw.                                                                                       | `:set nocursorline`                                                                                                                                    |
 | `:set cursorcolumn`      | Causes all lines to redraw.                                                                                       | `:set nocursorcolumn`                                                                                                                                  |
 | `:set relativenumber`    | Causes all lines to redraw.                                                                                       | `:set norelativenumber`                                                                                                                                |
-| `:set foldmethod=syntax` | If the syntax file is slow already, this makes it even worse.                                                     | `:set foldmethod=manual`, `:set foldmethod=marker` or [FastFold](https://github.com/Konfekt/FastFold) ⭐ 698 \| 🐛 13 \| 🌐 Vim Script \| 📅 2025-06-04 |
+| `:set foldmethod=syntax` | If the syntax file is slow already, this makes it even worse.                                                     | `:set foldmethod=manual`, `:set foldmethod=marker` or [FastFold](https://github.com/Konfekt/FastFold) ⭐ 698 \| 🐛 13 \| 🌐 Vim Script \| 📅 2026-11-16 |
 | `:set synmaxcol=3000`    | Due to internal representation, Vim has problems with long lines in general. Highlights columns till column 3000. | `:set synmaxcol=200`                                                                                                                                   |
 | matchparen.vim           | Loaded by default. Uses regular expressions to find the accompanying parenthesis.                                 | Disable plugin: `:h matchparen`                                                                                                                        |
 
@@ -2821,7 +2821,7 @@ See `man 7 ascii` and `:h NL-used-for-Nul` for more information.
 
 `Vim script`, `Vimscript`, and `VimL` all refer to the same thing: The
 programming language used for scripting Vim. Even though
-[8.0.360](https://github.com/vim/vim/commit/b544f3c81f1e6a50322855681ac266ffaa8e313c) ⭐ 41,350 | 🐛 1,795 | 🌐 Vim Script | 📅 2026-11-15
+[8.0.360](https://github.com/vim/vim/commit/b544f3c81f1e6a50322855681ac266ffaa8e313c) ⭐ 41,294 | 🐛 1,816 | 🌐 Vim Script | 📅 2026-11-15
 changed all references from `VimL` to `Vim script`, which can now be considered
 the official term, `VimL` is still widespread all over the internet.
 
@@ -2829,4 +2829,4 @@ No matter which term you use, everyone will understand it.
 
 ***
 
-> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-11-15._
+> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-11-17._
