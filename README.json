@@ -85,7 +85,7 @@
     }
   ],
   "metadata": {
-    "last_updated": "2026-11-17T02:27:42.141Z",
+    "last_updated": "2026-11-18T01:36:05.502Z",
     "original_repository_info": {
       "archived": false,
       "description": ":mortar_board: All things Vim!",
@@ -97,7 +97,7 @@
       "open_issues": 14,
       "owner": "mhinz",
       "repo": "vim-galore",
-      "stars": 18059,
+      "stars": 18060,
       "topics": [
         "awesome",
         "awesome-list",
