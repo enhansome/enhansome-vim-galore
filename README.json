@@ -70,7 +70,7 @@
                 "open_issues": 97,
                 "owner": "carlhuda",
                 "repo": "janus",
-                "stars": 7835,
+                "stars": 7834,
                 "topics": []
               },
               "first_seen": "2026-08-29T02:10:18.517Z"
@@ -85,7 +85,7 @@
     }
   ],
   "metadata": {
-    "last_updated": "2026-11-24T04:16:49.308Z",
+    "last_updated": "2026-11-25T03:01:28.370Z",
     "original_repository_info": {
       "archived": false,
       "description": ":mortar_board: All things Vim!",
