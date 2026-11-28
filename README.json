@@ -21,7 +21,7 @@
                 "open_issues": 5,
                 "owner": "wsdjeg",
                 "repo": "SpaceVim",
-                "stars": 20161,
+                "stars": 20159,
                 "topics": [
                   "neovim",
                   "neovim-plugin",
@@ -85,7 +85,7 @@
     }
   ],
   "metadata": {
-    "last_updated": "2026-11-27T02:09:38.456Z",
+    "last_updated": "2026-11-28T01:57:30.030Z",
     "original_repository_info": {
       "archived": false,
       "description": ":mortar_board: All things Vim!",
@@ -97,7 +97,7 @@
       "open_issues": 14,
       "owner": "mhinz",
       "repo": "vim-galore",
-      "stars": 18068,
+      "stars": 18067,
       "topics": [
         "awesome",
         "awesome-list",
